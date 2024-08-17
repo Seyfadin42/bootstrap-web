@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+.nav-link:hover {
+  background-color: rgba(33, 33, 221, 0.47);
+}
+
+/* Headings */
+.heading-color-1 {
+  color: #3498db; /* Example color for h3 */
+}
+.form{
+  width: 70%;
+  margin: auto;
+  max-width: 444px;
+}
+.heading-color-2 {
+  color: #e74c3c; /* Example color for h1 */
+}
+
+/* Lead Text */
+.lead {
+  text-decoration: underline red 3px;
+  color: red;
+}
+
+/* Body */
+body {
+  padding-top: 100px; /* Space for fixed navbar */
+  background-color: #343a40; /* Dark background for contrast */
+}
+
+/* Main Section */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-image: url('images/images (2).jfif');
+  background-size: cover;
+}
+
+.main-section img {
+  max-width: 100%;
+  height: auto; /* Responsive image */
+}
+
+/* Image Float */
+.float {
+  float: right;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .main-section {
+    flex-direction: row;
+  }
+}
+
+/* Progress Animation */
+@keyframes progress-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%; /* Change according to the actual value */
+  }
+}
+
+/* Image Animation */
+.image-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.5s; /* Delay to create a staggered effect */
+}
+
+#ah {
+  text-align: center;
+  justify-content: center;
+  color: forestgreen;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Container */
+.progress-container {
+  margin-top: 20px; /* Space between paragraphs and progress bars */
+}
+
+.label {
+  margin-bottom: 5px; /* Space between label and progress bar */
+}
+
+/* Fluid Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Additional Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Services */
+.service {
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.service.visible {
+  animation-name: fadeIn;
+}
+
+/* Gallery Card */
+.gallery-card {
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.5s, transform 0.5s; /* Animation on reveal */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly down */
+}
+
+.gallery-card.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+.card-body {
+  background: #f8f9fa;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Gallery Image */
+.gallery-img {
+  height: 200px;
+  object-fit: cover; /* Ensures images cover the area */
+  transition: opacity 0.5s;
+}
+
+.gallery-card:hover .gallery-img {
+  opacity: 0.6; /* Change opacity on hover */
+}
+
+/* Gallery Description */
+.gallery-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s;
+}
+
+.gallery-card:hover .gallery-description {
+  opacity: 1; /* Show on hover */
+}
+
+/* For click to show */
+.show {
+  opacity: 1; /* Show when clicked */
+}
+#aha {
+  text-align: center;
+  justify-content: center;
+  margin-left: 222px;
+}
+/* Table Styles */
+.table {
+  background-color: #495057; /* Table background color */
+  color: white; /* Text color */
+}
+
+.table th {
+  background-color: #007bff; /* Header color */
+  color: white; /* Header text color */
+}
+
+tbody tr:hover {
+  background-color: #6c757d; /* Row hover color */
+}
